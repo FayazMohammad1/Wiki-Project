@@ -30,7 +30,8 @@ export const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
+      if (currentUser) 
+        {
         const { accessToken } = currentUser;
         const user = {
           uid: currentUser.uid,
@@ -49,6 +50,7 @@ export const AuthContextProvider = ({ children }) => {
     const provider = new GoogleAuthProvider();
     try {
       const result = await signInWithPopup(auth, provider);
+      var googleUserData = {name: result.user.displayName, email: result.user.email , password: '123', passwordConfirm: '123'}
       const { accessToken } = result.user;
       const user = {
         uid: result.user.uid,
@@ -56,8 +58,9 @@ export const AuthContextProvider = ({ children }) => {
         email: result.user.email,
         photoURL: result.user.photoURL,
       };
+
       login(accessToken, user);
-      return result;
+      return googleUserData;
     } catch (error) {
       console.error("Error during Google sign-in:", error);
     }

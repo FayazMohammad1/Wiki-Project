@@ -8,23 +8,42 @@ exports.signup = async (req, res, next) => {
     try {
         console.log("Signup request body:", req.body);  // Log request body
         const user = await User.findOne({ email: req.body.email });
-
-        if (user) {
-            return next(new createError('User already exists!', 400));
+        if (user) 
+        {
+            if(req.body.GOOGLE)
+            {
+                const token = jwt.sign({ _id: user._id }, 'secretkey123', {
+                    expiresIn: '90d',
+                });
+                res.status(200).json({
+                    status: 'success',
+                    token,
+                    message: 'Logged in successfully',
+                    user: {
+                        _id: user._id,
+                        name: user.name,
+                        email: user.email
+                    }
+                });
+s
+            }
+            else
+            {
+                return next(new createError('User already exists!', 400));
+            }
         }
-
-        const hashedPassword = await bcrypt.hash(req.body.password, 12);
-
-        const newUser = await User.create({
-            ...req.body,
-            password: hashedPassword,
-        });
-
-        // ASSIGN JWT TO USER
+        else
+        {
+            delete req.body.GOOGLE;
+            const hashedPassword = await bcrypt.hash(req.body.password, 12);
+            const newUser = await User.create({
+                ...req.body,
+                password: hashedPassword,
+            });
+                    // ASSIGN JWT TO USER
         const token = jwt.sign({ _id: newUser._id }, 'secretkey123', {
             expiresIn: '90d',
         });
-        
         res.status(201).json({
             status: 'success',
             message: 'User registered successfully',
@@ -35,6 +54,12 @@ exports.signup = async (req, res, next) => {
                 email: newUser.email
             }
         });
+
+
+        }
+
+
+
 
     } catch (error) {
         console.error(error);  // Log error

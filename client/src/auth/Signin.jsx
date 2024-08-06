@@ -5,25 +5,42 @@ import login from '../assets/images/login.svg';
 import useLogin from "../hooks/useLogin";
 import GoogleButton from "react-google-button";
 import { UserAuth } from "../contexts/AuthContextFirebase";
-
+import useSignup from "../hooks/useSignup";
 
 const Signin = () => {
-  const { googleSignIn, user, isAuthenticated } = UserAuth();
+  const { googleSignIn, isAuthenticated } = UserAuth();
   const navigate = useNavigate();
+  const { error, loading, loginUser } = useLogin();
+  const { error: signupError, loading: signupLoading, registerUser } = useSignup();
 
   const handleGoogleSignIn = async () => {
     try {
-      var user = await googleSignIn();
-      console.log(user); // Log user details to the console
+      const user = await googleSignIn();
+      handleRegister(user);
       navigate('/home');
-      window.location.reload();
-    } catch (error) {
-      console.log(error);
+      // window.location.reload();
+
+
+
+    } 
+    catch (error) 
+    {
+
     }
   };
 
-
-  const { error, loading, loginUser } = useLogin();
+  const handleRegister = (user) => {
+    if (user) {
+      console.log(user)
+      const userDetails = {
+        name: user.name,
+        email: user.email,
+        password: '123',
+        passwordConfirm: '123'
+      };
+      registerUser(userDetails , true);
+    }
+  };
 
   const handleLogin = async (values) => {
     await loginUser(values);
@@ -97,10 +114,7 @@ const Signin = () => {
                   </Button>
                 </Link>
               </Form.Item>
-              
-              {/* <Form.Item className="items-center font-light">
-                <GoogleButton onClick={handleGoogleSignIn} />
-              </Form.Item> */}
+
               <div className="flex items-center font-medium text-gray-300 mb-[1.5rem]">
                 <div className="w-[45%] h-[2px] bg-gray-200 mr-2"></div>
                 OR
@@ -114,11 +128,6 @@ const Signin = () => {
                   </Button>
                 </Link>
               </Form.Item>
-
-              <div>
-
-              </div>
-            
             </Form>
           </Flex>
         </Flex>
