@@ -4,19 +4,19 @@ import { useContext, createContext, useState } from "react";
 const SidebarContext = createContext();
 
 export default function Sidebar({ children }) {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <aside className={`h-screen ${expanded ? 'w-60' : 'w-[70px]'} transition-all ${expanded ? 'mr-14' : 'mr-2'}`}>
       <nav className="h-full fixed flex flex-col bg-white border-r shadow-sm">
         <div className="p-4 pb-2 flex justify-between items-center">
-          <img
+          {/* <img
             src="https://img.logoipsum.com/243.svg"
             className={`overflow-hidden transition-all ${
               expanded ? "w-32" : "w-0"
             }`}
             alt=""
-          />
+          /> */}
           <button
             onClick={() => setExpanded((curr) => !curr)}
             className="p-1.5 ml-auto rounded-lg bg-gray-50 hover:bg-gray-100"
