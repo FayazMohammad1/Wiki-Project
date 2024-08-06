@@ -13,27 +13,23 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex h-[100vh] items-center justify-center">
-      <Card className="form-container w-[1000px]">
-        <Flex gap="large" align="center">
+    <div className="flex flex-col md:flex h-[100vh] md:items-center md:justify-center">
+      <Card className="form-container md:w-[90%]">
+        <Flex gap="large" align="center" className="flex flex-col-reverse md:flex md:flex-row">
           {/* form */}
-          <Flex vertical flex={1}>
+          <Flex vertical flex={0.7}>
             <Typography.Title level={3} strong className="title text-center">
               Create an account
             </Typography.Title>
-            <p className="text-base font-medium text-gray-400 text-center">
+            <p className="text-base font-medium mb-4 text-gray-400 text-center ">
               Join for exclusive access!
             </p>
-            {/* <Typography.Title type='secondary' className='slogan text-center'>
-                    Join for exclusive access!
-                </Typography.Title> */}
-
             <Form
               layout="vertical"
               onFinish={handleRegister}
               autoComplete="off"
             >
-              <Form.Item
+              <Form.Item className="font-medium"
                 label="Full Name"
                 name="name"
                 rules={[
@@ -46,7 +42,7 @@ const Signup = () => {
                 <Input size="large" placeholder="Enter your full name" />
               </Form.Item>
 
-              <Form.Item
+              <Form.Item className="font-medium"
                 label="Email"
                 name="email"
                 rules={[
@@ -63,7 +59,7 @@ const Signup = () => {
                 <Input size="large" placeholder="Enter your email" />
               </Form.Item>
 
-              <Form.Item
+              <Form.Item className="font-medium"
                 label="Password"
                 name="password"
                 rules={[
@@ -79,7 +75,7 @@ const Signup = () => {
                 />
               </Form.Item>
 
-              <Form.Item
+              <Form.Item className="font-medium"
                 label="Confirm Password"
                 name="passwordConfirm"
                 rules={[
@@ -102,7 +98,7 @@ const Signup = () => {
                   type={`${loading ? "" : "primary"}`}
                   htmlType="submit"
                   size="large"
-                  className="w-[100%]"
+                  className="w-[100%] mt-2 font-medium"
                 >
                   {loading ? <Spin /> : 'Create Account'}
                   
@@ -111,7 +107,7 @@ const Signup = () => {
 
               <Form.Item>
                 <Link to="/signin">
-                  <Button size="large" className="w-[100%]">
+                  <Button size="large" className="w-[100%] -mt-2 font-medium">
                     Sign In
                   </Button>
                 </Link>

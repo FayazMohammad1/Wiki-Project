@@ -36,23 +36,23 @@ const Signin = () => {
   }, [isAuthenticated, navigate]);
 
   return (
-    <div className="flex h-[100vh] items-center justify-center">
-      <Card className="form-container w-[1000px]">
-        <Flex gap="large" align="center">
+    <div className="flex flex-col md:flex md:items-center md:justify-center h-[100vh] items-center justify-center">
+      <Card className="form-container w-[100%] md:w-[90%]">
+        <Flex gap="large" align="center" className="flex flex-col md:flex md:flex-row">
           <Flex flex={1}>
             <img src={login} alt="" className="w-[100%] rounded-lg" />
           </Flex>
 
-          <Flex vertical flex={1}>
+          <Flex vertical flex={0.7}>
             <Typography.Title level={3} strong className="title text-center">
               Sign In
             </Typography.Title>
-            <p className="text-base font-medium text-gray-400 text-center">
+            <p className="text-base font-medium text-gray-400 mb-4 text-center">
               Welcome back!
             </p>
 
             <Form layout="vertical" onFinish={handleLogin} autoComplete="off">
-              <Form.Item
+              <Form.Item className="font-medium"
                 label="Email"
                 name="email"
                 rules={[
@@ -69,7 +69,7 @@ const Signin = () => {
                 <Input size="large" placeholder="Enter your email" />
               </Form.Item>
 
-              <Form.Item
+              <Form.Item className="font-medium"
                 label="Password"
                 name="password"
                 rules={[
@@ -85,14 +85,14 @@ const Signin = () => {
               {error && <Alert description={error} type='error' showIcon closable className='mb-[1.5rem]' />}
 
               <Form.Item>
-                <Button type={`${loading ? "" : "primary"}`} htmlType="submit" size="large" className="w-[100%]">
+                <Button type={`${loading ? "" : "primary"}`} htmlType="submit" size="large" className="w-[100%] font-medium mt-2">
                   {loading ? <Spin /> : 'Sign In'}
                 </Button>
               </Form.Item>
 
               <Form.Item>
                 <Link to="/">
-                  <Button size="large" className="w-[100%]">
+                  <Button size="large" className="w-[100%] -mt-2 font-medium">
                     Create Account
                   </Button>
                 </Link>
@@ -109,7 +109,7 @@ const Signin = () => {
 
               <Form.Item className=""> 
                 <Link to="/signin">
-                  <Button onClick={handleGoogleSignIn} size="large" className="w-[100%]">
+                  <Button onClick={handleGoogleSignIn} size="large" className="w-[100%] font-medium">
                     <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" alt="" className="h-7" />Sign in with Google
                   </Button>
                 </Link>

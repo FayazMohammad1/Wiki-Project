@@ -81,8 +81,8 @@ const Navbar = () => {
 
   return (
     <header className="header">
-      <nav className="nav container h-[68px] flex justify-around items-center">
-        <Link to='/home' className="inline-flex items-center font-poppins gap-2 font-semibold text-2xl hover:text-[#3368CC] mr-8 text-[#1D2E4D]">
+      <nav className="nav container h-[68px] flex justify-between items-center w-[93%]">
+        <Link to='/home' className="inline-flex items-center font-poppins gap-2 font-semibold text-2xl hover:text-[#3368CC] md:ml-16 md:mr-96 lg:ml-6 lg:mr-1 xl:ml-10 2xl:ml-24 text-[#1D2E4D] ml-4">
           <i className="ri-code-s-slash-line text-lg"></i>LOGO
         </Link>
 
@@ -452,7 +452,7 @@ const Navbar = () => {
         </div>
 
         <Link to='/create-article'>
-        <button className="bg-[#1D2E4D] text-[#FCFDFF] px-[1.5rem] hidden md:flex justify-between items-center transition-colors duration-300 font-poppins text-center h-10 rounded-lg hover:bg-[#3368CC]">
+        <button className="bg-[#1D2E4D] text-[#FCFDFF] px-[1.5rem] hidden md:flex justify-between items-center transition-colors duration-300 font-poppins text-center h-10 lg:ml-28 rounded-lg hover:bg-[#3368CC]">
           <div>
             <i className="ri-add-line"></i>
             <span className="ml-[6px]">Create</span>
@@ -460,7 +460,7 @@ const Navbar = () => {
         </button>
         </Link>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 md:-mr-48 lg:mr-6 ">
           <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
             <i
               className={`ri-menu-line nav__toggle-menu ${

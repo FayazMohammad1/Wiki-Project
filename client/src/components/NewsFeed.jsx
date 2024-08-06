@@ -3,25 +3,25 @@ import Timer from './Timer'
 
 const NewsFeed = () => {
   return (
-    <div className='flex gap-4 mb-8'>
-    <div className='flex flex-col w-2/3 h-[960px] bg-white ml-[94px]'>
+    <div className='flex flex-col lg:flex-row gap-4 mb-8 mr-4 '>
+    <div className='flex flex-col max-w-[95%] bg-white ml-4 md:ml-16 lg:ml-24 xl:ml-28'>
     
     <div className='flex '>
-        <h1 className='text-[#1D2E4D] font-semibold text-3xl p-8 inline-flex mr-auto'>
+        <h1 className='text-[#1D2E4D] font-semibold text-2xl lg:text-4xl p-6 inline-flex mr-auto'>
             News Feed
         </h1>
-        <a href=""><p className='p-8 text-[#1D2E4D] hover:text-[#3368CC] transition-colors duration-300 h-3 font-normal mt-2'><i class="ri-eye-fill mr-1"></i>See more</p></a>
+        <a href=""><p className='p-6 text-[#1D2E4D] hover:text-[#3368CC] transition-colors duration-300 h-3 font-normal mt-2'><i class="ri-eye-fill mr-1"></i>See more</p></a>
     </div>
         
         
-<div className='flex flex-row mb-3'>
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl h-[400px] ml-8">
+<div className='flex flex-col lg:flex-row mb-2 md:flex-row'> 
+<div class="max-w-[23rem] 2xl:max-w-96 bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl transition-all duration-300 ml-6 mr-6 xl:mr-0 mb-4">
     <a href="#">
         <img class="rounded-t-lg h-52 w-full" src="https://profiletree.com/wp-content/uploads/2023/02/technology-3.webp" alt="" />
     </a>
     <div class="p-5">
         <a href="#">
-            <h5 class="mb-2 mt-2 text-xl font-semibold tracking-tight text-gray-700 ">Noteworthy technology</h5>
+            <h5 class="mb-2 mt-2 text-lg font-semibold tracking-tight text-gray-700 ">Noteworthy technology</h5>
         </a>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the enterprise technology  of 2021 so far, in reverse chronological order.</p>
         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -33,13 +33,13 @@ const NewsFeed = () => {
     </div>
 </div>
 
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl h-[400px] ml-3">
+<div class="max-w-[23rem] 2xl:max-w-96 bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl transition-all duration-300 ml-6 mr-6 mb-4">
     <a href="#">
         <img class="rounded-t-lg h-52 w-full" src="https://cdn.britannica.com/84/203584-131-357FBE7D/speed-internet-technology-background.jpg" alt="" />
     </a>
     <div class="p-5">
         <a href="#">
-            <h5 class="mb-2 mt-2 text-xl font-semibold tracking-tight text-gray-700 ">Blockchain Innovations</h5>
+            <h5 class="mb-2 mt-2 text-lg font-semibold tracking-tight text-gray-700 ">Blockchain Innovations</h5>
         </a>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">New advancements in blockchain field improved speed and security.</p>
         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -54,14 +54,14 @@ const NewsFeed = () => {
 
 
 
-<div className='flex flex-row'>
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl h-[400px] ml-8">
+<div className='flex flex-col lg:flex-row mb-3 md:flex-row'>
+<div class="max-w-[23rem] 2xl:max-w-96 bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl transition-all duration-300 ml-6 mr-6 xl:mr-0 mb-4">
     <a href="#">
         <img class="rounded-t-lg h-52 w-full" src="https://bernardmarr.com/wp-content/uploads/2022/04/The-10-Biggest-Technology-Trends-That-Will-Transform-The-Next-Decade.jpg" alt="" />
     </a>
     <div class="p-5">
         <a href="#">
-            <h5 class="mb-2 mt-2 text-xl font-semibold tracking-tight text-gray-700">Edge Computing Growth</h5>
+            <h5 class="mb-2 mt-2 text-lg font-semibold tracking-tight text-gray-700">Edge Computing Growth</h5>
         </a>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Edge computing solutions expanded, bringing faster processing capabilities.</p>
         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -73,13 +73,13 @@ const NewsFeed = () => {
     </div>
 </div>
 
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl h-[400px] ml-3">
+<div class="max-w-[23rem] 2xl:max-w-96 bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl transition-all duration-300 ml-6 mr-6 mb-4">
     <a href="#">
         <img class="rounded-t-lg h-52 w-full" src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg" alt="" />
     </a>
     <div class="p-5">
         <a href="#">
-            <h5 class="mb-2 mt-2 text-xl font-semibold tracking-tight text-gray-700">AI in Healthcare</h5>
+            <h5 class="mb-2 mt-2 text-lg font-semibold tracking-tight text-gray-700">AI in Healthcare</h5>
         </a>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">AI in healthcare improved diagnostics and personalized treatment plans.</p>
         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -93,16 +93,16 @@ const NewsFeed = () => {
 </div>
     </div>
 
-    <div className='flex flex-col w-1/3 h-[595px] bg-white mr-[94px]'>
+    <div className='flex flex-col w-[95%] ml-4 mr-4 xl:ml-0 md:ml-14 lg:w-[30%] 2xl:w-[35%] 2xl:p-3 h-[595px] bg-white'>
     <div className='flex '>
-        <h1 className='text-[#1D2E4D] font-semibold text-3xl p-8 inline-flex '>
+        <h1 className='text-[#1D2E4D] font-semibold text-2xl lg:text-4xl p-6 inline-flex mr-auto'>
             Events
         </h1>
-        <p className='p-8 text-[#1D2E4D] hover:text-[#3368CC] transition-colors duration-300 h-3 font-normal mt-2 ml-24'><i class="ri-eye-fill mr-1"></i><a href="">See more</a></p>
+        <p className='p-6 text-[#1D2E4D] hover:text-[#3368CC] transition-colors duration-300 h-3 font-normal mt-2'><i class="ri-eye-fill mr-1"></i><a href="">See more</a></p>
     </div>
 
     <div className='flex flex-col mb-3' >
-        <div className='flex flex-row ml-[34px] bg-gray-100 mr-[34px]'>
+        <div className='flex flex-row ml-6 bg-gray-100 mr-6'>
             <div className='bg-[#3368CC] p-3 text-white font-semibold text-2xl items-center'>25 <br /> <span className='font-normal text-base'>JUL</span></div>
             <div className='text-lg font-semibold ml-3 m-2'>
                 Finance Town Hall
@@ -116,7 +116,7 @@ const NewsFeed = () => {
     </div>
 
     <div className='flex flex-col mb-3' >
-        <div className='flex flex-row ml-[34px] bg-gray-100 mr-[34px]'>
+        <div className='flex flex-row ml-6 bg-gray-100 mr-6'>
             <div className='bg-[#3368CC] p-3 text-white font-semibold text-2xl items-center'>26 <br /> <span className='font-normal text-base'>JUL</span></div>
             <div className='text-lg font-semibold ml-3 m-2'>
                 CEO Meetup
@@ -130,7 +130,7 @@ const NewsFeed = () => {
     </div>
 
     <div className='flex flex-col mb-3' >
-        <div className='flex flex-row ml-[34px] bg-gray-100 mr-[34px]'>
+        <div className='flex flex-row ml-6 bg-gray-100 mr-6'>
             <div className='bg-[#3368CC] p-3 text-white font-semibold text-2xl items-center'>29 <br /> <span className='font-normal text-base'>JUL</span></div>
             <div className='text-lg font-semibold ml-3 m-2'>
                 Cricket League
@@ -144,7 +144,7 @@ const NewsFeed = () => {
     </div>
 
     <div className='flex flex-col mb-3' >
-        <div className='flex flex-row ml-[34px] bg-gray-100 mr-[34px]'>
+        <div className='flex flex-row ml-6 bg-gray-100 mr-6'>
             <div className='bg-[#3368CC] p-3 text-white font-semibold text-2xl items-center'>30 <br /> <span className='font-normal text-base'>JUL</span></div>
             <div className='text-lg font-semibold ml-3 m-2'>
                 Team Dinner
@@ -159,7 +159,7 @@ const NewsFeed = () => {
 
     {/* countdown */}
 
-    <div className='relative bg-[#1D2E4D] mt-[61px] h-[370px]'>
+    <div className='relative bg-[#1D2E4D] mt-5 xl:mt-14'>
   <img
     src="https://www.godelta.com/hubfs/Blog-Images/company-swag-ideas/Best-Company-Swag-Ideas_Hero.jpg"
     alt=""

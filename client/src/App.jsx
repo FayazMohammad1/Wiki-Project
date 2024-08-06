@@ -21,10 +21,12 @@ function App() {
       <>
       <AuthContextProvider>
       <Routes>
-        <Route path='/' element={ !isAuthenticated ? <Signup/> : <Navigate to='/home' />} />
-        <Route path='/signin' element={ !isAuthenticated ? <Signin/> : <Navigate to='/home' />} />
-        {/* <Route path='/home' element={ isAuthenticated ? <Home/> : <Signin /> } /> */}
-        <Route path='/home' element={ isAuthenticated ? <Home/> : <Navigate to='/signin' /> } />
+        {/* These are commented out bcoz of authentication in mobile screen */}
+        {/* <Route path='/' element={ !isAuthenticated ? <Signup/> : <Navigate to='/home' />} /> */}
+        {/* <Route path='/signin' element={ !isAuthenticated ? <Signin/> : <Navigate to='/home' />} /> */}
+        {/* <Route path='/home' element={ isAuthenticated ? <Home/> : <Navigate to='/signin' /> } /> */}
+
+        <Route path='/home' element={<Home/>} />
         <Route path='/create-article' element={<CreateArticle />} />
         <Route path='/all-questions' element={<AllQuestions />} />
         <Route path='/all-questions/ask' element={<AskQuestion />} />
