@@ -25,7 +25,6 @@ exports.signup = async (req, res, next) => {
                         email: user.email
                     }
                 });
-s
             }
             else
             {
