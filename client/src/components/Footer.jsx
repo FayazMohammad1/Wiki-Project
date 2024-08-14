@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-[#17243c] border-y">
-        <div className="mx-auto my-12 w-full max-w-screen-xl py-6 lg:py-8">
+      <footer className="bg-[#17243c] border-y mt-96 xl:mt-1 w-full ">
+        <div className="mx-auto my-12 w-full max-w-screen-xl py-6 lg:py-8 ml-4 lg:ml-28 2xl:ml-auto 2xl:mr-auto">
           {/* <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" /> */}
-          <div className="md:flex md:justify-between">
+          <div className="md:flex md:justify-between xl:mr-10 md:ml-4">
             {/* Logo */}
-            <div className="mb-6 md:mb-0">
+            <div className="mb-6 md:mb-0 md:mr-14">
               <Link className="inline-flex items-center gap-2 font-poppins font-semibold text-2xl hover:text-[#3368CC] transition-colors duration-300 mr-8 text-white">
                 <i className="ri-code-s-slash-line text-lg "></i>LOGO
               </Link>
@@ -60,10 +60,10 @@ export default function Footer() {
             </div>
 
             {/* Navigation Links */}
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {/* Resources */}
-              <div>
-                <h2 className="mb-6 text-md font-semibold text-white uppercase">
+            <div className="grid grid-cols-2 sm:grid-cols-3">
+              {/* Get in Touch */}
+              <div className="mr-10">
+                <h2 className="mb-3 text-md font-semibold text-white uppercase">
                   Get in Touch
                 </h2>
                 <ul className="text-gray-500 font-medium">
@@ -90,9 +90,9 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
-              {/* Pages */}
-              <div className="ml-6">
-                <h2 className="mb-6 text-md font-semibold text-white uppercase">
+              {/* Learn More */}
+              <div className="ml-8">
+                <h2 className="mb-3 text-md font-semibold text-white uppercase">
                   Learn More
                 </h2>
                 <ul className="text-gray-500 font-medium">
@@ -117,22 +117,22 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
-              {/* Legal */}
-              <div>
-                <h2 className="mb-6 text-md font-semibold text-white uppercase">
+              {/* Newsletter */}
+              <div className="md:mr-10"> 
+                <h2 className="mb-3 text-md font-semibold text-white uppercase">
                   Our Newsletter
                 </h2>
                 <ul className="text-gray-500 font-medium">
                   <p>
-                    Subscribe to our newsletter to get our <br /> news & deals
+                    Subscribe to our newsletter to get our news & deals
                     delivered to you.
                   </p>
                   <input
                     type="text"
                     placeholder="Email Address"
-                    className="mt-6 p-3 font-normal rounded text-white bg-[#1D2E4D] opacity-80"
+                    className="mt-3 mb-2 p-3 md:w-36 xl:w-48 font-normal rounded text-white bg-[#1D2E4D] opacity-80"
                   />
-                  <button className="ml-2 pl-4 pr-4 p-3 font-normal bg-white text-[#1D2E4D] rounded hover:bg-[#3368CC] hover:text-white transition-colors duration-300">
+                  <button className="pl-5 pr-5 p-3 font-normal bg-white text-[#1D2E4D] rounded hover:bg-[#3368CC] hover:text-white transition-colors duration-300">
                     Join
                   </button>
                 </ul>

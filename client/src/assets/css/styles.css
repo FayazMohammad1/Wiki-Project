@@ -264,12 +264,12 @@ a {
     position: absolute;
     left: 0;
     right: 0;
-    top: 6.5rem;
+    top: var(--header-height);
     background-color: var(--body-color);
     box-shadow: 0 6px 8px hsla(220, 68%, 12%, 0.05);
     pointer-events: none;
     opacity: 0;
-    transition: top 1s, opacity 0.3s;
+    transition: top 0.4s ease-out, opacity 0.3s ease-out;
   }
   .dropdown__content {
     grid-template-columns: repeat(4, max-content);
@@ -316,9 +316,9 @@ a {
     transform: rotate(180deg);
   }
   .dropdown__item:hover > .dropdown__container {
-    top: 3.5rem;
+    top: var(--header-height);
     opacity: 1;
-    transition: top 1s;
+    transition: top 0.4s ease-out, opacity 0.3s ease-out;
     pointer-events: initial;
     cursor: initial;
   }
@@ -340,4 +340,3 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
-  

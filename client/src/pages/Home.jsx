@@ -8,13 +8,13 @@ import NewsFeed from "../components/NewsFeed";
 const Home = () => {
   
   return (
-    <>
+    <div className="flex flex-col align-center items-center">
       <Navbar/>
       <Hero/>
       <Insights/>
       <NewsFeed/>
       <Footer/>
-    </>
+    </div>
   );
 };
 

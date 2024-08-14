@@ -47,7 +47,7 @@ const TagsInput = props => {
     }
   }
   return (
-    <div className="tags-input flex items-center flex-wrap min-h-12 w-[100%] py-0 px-2 border rounded-md text-xs border-gray-300 focus-within:border-[2px] focus-within:border-gray-700 justify-center ">
+    <div className="tags-input flex flex-col md:flex md:flex-row items-start md:items-center md:flex-wrap min-h-12 w-[100%] py-0 px-2 border rounded-md text-xs border-gray-300 focus-within:border-[2px] focus-within:border-gray-700 justify-center ">
                     <ul className="flex">
                       {
                         tags.map((tag, index) => <li key={index} className="flex p-2 items-center justify-center bg-[#1c60e7d8] ml-1 text-white gap-1 rounded-md">
@@ -56,7 +56,7 @@ const TagsInput = props => {
                       </li>)
                       }
                     </ul>
-                    <input type="text" placeholder="Press enter to add tags" className="flex flex-1 border-none h-[46px] text-[12px] p-1 focus:outline-none" onKeyUp={e => e.key ==="Enter" ? addTags(e) : null}/>
+                    <input type="text" placeholder="Press enter to add tags" className="flex flex-col flex-wrap md:flex md:flex-1 border-none h-[46px] text-[12px] p-1 focus:outline-none" onKeyUp={e => e.key ==="Enter" ? addTags(e) : null}/>
                   </div>
 
   )
@@ -78,7 +78,7 @@ const AskQuestion = () => {
     <div className="flex flex-col h-screen">
       <Navbar />
       <div className="flex flex-1 mt-[69px]">
-        <Sidebar className="fixed mt-[90px] w-64">
+        <Sidebar className="fixed mt-[90px] w-64 z-10">
           {" "}
           {/* Set a fixed width for the Sidebar */}
           <SidebarItem icon={<House size={20} />} text="Home" />
@@ -96,7 +96,7 @@ const AskQuestion = () => {
           <SidebarItem icon={<LifeBuoy size={20} />} text="Help" />
         </Sidebar>
 
-        <div className="add-question flex-1 flex flex-col">
+        <div className="add-question flex-1 flex flex-col ">
           {" "}
           {/* Add a margin-left equal to the Sidebar width */}
           <div className="add-question-container flex flex-col bg-white p-4 w-[100%]">
@@ -135,8 +135,8 @@ const AskQuestion = () => {
                 </li>
               </ul>
             </div>
-            <div className="question-container">
-              <div className="question-options">
+            <div className="question-container ">
+              <div className="question-options ">
                 <div className="question-option flex flex-col w-[100%] border p-5 rounded-md border-gray-200 mb-4 shadow">
                   <h3 className="text-base font-semibold text-gray-900 mb-2">
                     Title
@@ -166,7 +166,7 @@ const AskQuestion = () => {
                     value={value}
                     onChange={setValue}
                     modules={modules} 
-                                       
+                    
                   />
                 </div>
 
@@ -198,7 +198,7 @@ const AskQuestion = () => {
                   <small className="mb-2">
                     Add up to 5 tags to describe what your question is about.
                   </small>
-                  <TagsInput selected={selected}/>
+                  <TagsInput className="flex flex-col" selected={selected}/>
                   {/* <TagsInput /> */}
                 </div>
               </div>
