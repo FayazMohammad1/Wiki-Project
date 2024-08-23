@@ -124,7 +124,7 @@ const AskQuestion = () => {
       formData.append('user_id', userId);
 
       try {
-        const response = await axios.post('http://localhost:3001/api/images/upload_image_temp', formData, {
+        const response = await axios.post('http://localhost:3000/api/images/upload_image_temp', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -217,7 +217,7 @@ const AskQuestion = () => {
       console.log(images);
       console.log(title);
 
-      const response = await axios.post('http://localhost:3001/api/save-content/', {
+      const response = await axios.post('http://localhost:3000/api/save-content/', {
         title : title, 
         content1 : value,
         content2 : value2,

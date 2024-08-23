@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const authRouter = require('./routes/authRoute');
+const imageRouter = require('./routes/imageRoute');
+
 const app = express();
 
 
@@ -12,12 +14,16 @@ app.use(express.json());
 
 // 2) ROUTE
 app.use('/api/auth', authRouter);
+app.use('/api', imageRouter);
+
 
 // 3) MONGO DB CONNECTION
 mongoose
   .connect("mongodb://127.0.0.1:27017/authentication")
   .then(() => console.log("Connected to MongoDB!"))
   .catch((error) => console.error("Failed to connect to MongoDB: ", error));
+
+
 
 // 4) GLOBAL ERROR HANDLER
 app.use((err, req, res, next) => {  // Corrected order of parameters
